@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Modern static website for Behavior Observation: BOSS app",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "vite",
+    "build": "vite build && cp -r src/assets/* dist/assets/",
+    "build:quick": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^7.2.1",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.1.5"
+  }
+}
