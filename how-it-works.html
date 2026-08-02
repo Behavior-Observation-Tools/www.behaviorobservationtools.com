@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How It Works - Behavior Observation of Students in School (BOSS)</title>
+    <meta
+      name="description"
+      content="Learn how the BOSS tool facilitates observation and recording of student behavior using peer comparison, momentary time sampling, and partial interval recording."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/img/icon.png" />
+
+    <!-- Styles -->
+    <!-- CSS is imported via JavaScript for better HMR support -->
+
+    <!-- Scripts -->
+    <script src="/src/scripts/theme.ts" type="module"></script>
+    <script src="/src/scripts/interactions.ts" type="module"></script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-2">
+            <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8" />
+            <a
+              href="./index.html"
+              class="font-display font-bold text-xl text-primary-600 dark:text-primary-400"
+              >BOSS</a
+            >
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="./index.html"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="./index.html#features"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Features</a
+            >
+            <a
+              href="./how-it-works.html"
+              class="text-primary-600 dark:text-primary-400 font-semibold"
+              >How It Works</a
+            >
+            <a
+              href="./contact.html"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Contact</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-gray-900 dark:to-gray-800"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1
+          class="text-4xl md:text-6xl font-display font-bold bg-gradient-to-r from-primary-600 via-accent-600 to-purple-600 bg-clip-text text-transparent mb-6"
+        >
+          How It Works
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          The BOSS tool facilitates the observation and recording of student behavior in classroom
+          settings using scientifically validated methods.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Overview Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+          <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-6">
+            BOSS Methodology Overview
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            Observations are conducted in intervals, and data is collected regarding students'
+            engagement in tasks, as well as specific non-engaged behaviors. The tool also allows for
+            peer comparison by tracking behavior data for a peer at specified intervals.
+          </p>
+        </div>
+
+        <!-- Peer Comparison -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+          <div class="flex items-start space-x-4 mb-6">
+            <div
+              class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600 dark:text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white pt-2">
+              Peer Comparison
+            </h2>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            During an observation, every 5th interval is designated for tracking behavior data for a
+            peer. To begin, select one peer at the corner of the room or desk, and then move to the
+            next peer each time the peer screen appears. This process ensures that data is collected
+            for multiple peers within a single observation. Alternatively, if you prefer to focus on
+            the same peer for the entire observation, you can choose to record data for that
+            specific peer each time the peer screen appears.
+          </p>
+        </div>
+
+        <!-- Momentary Time Sampling -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+          <div class="flex items-start space-x-4 mb-6">
+            <div
+              class="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-green-600 dark:text-green-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white pt-2">
+              Momentary Time Sampling: Engaged Behaviors
+            </h2>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+            Momentary time sampling is used to assess student engagement in tasks at the end of each
+            interval. There are two levels of engagement to consider:
+          </p>
+
+          <!-- Actively Engaged -->
+          <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 mb-4">
+            <h3 class="text-lg font-semibold text-green-800 dark:text-green-300 mb-3">
+              Actively Engaged in Task
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-3">
+              Indicators of active engagement include:
+            </p>
+            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Writing</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Raising their hand</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  >Answering/asking questions (to the teacher or other students during group
+                  work)</span
+                >
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Turning a page</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Reading (silently or aloud)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Passively Engaged -->
+          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mb-4">
+            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-300 mb-3">
+              Passively Engaged in Task
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-3">
+              Indicators of passive engagement include:
+            </p>
+            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+              <li class="flex items-center space-x-2">
+                <svg
+                  class="w-5 h-5 text-blue-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Body and eye gaze oriented toward the speaker or task</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-gray-600 dark:text-gray-300 italic">
+            If the student is not engaged in the task at all, do not select either of the engagement
+            options.
+          </p>
+        </div>
+
+        <!-- Partial Interval Recording -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+          <div class="flex items-start space-x-4 mb-6">
+            <div
+              class="flex-shrink-0 w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-amber-600 dark:text-amber-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white pt-2">
+              Partial Interval Recording: Non-Engaged Behaviors
+            </h2>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+            Partial interval recording is used to capture instances of specific non-engaged
+            behaviors during each interval. If a student engages in any of the following behaviors
+            at any moment during the interval, record the corresponding behavior:
+          </p>
+
+          <div class="space-y-4">
+            <!-- Passive -->
+            <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Passive</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Student looks away from the speaker or task for at least 10 seconds
+              </p>
+            </div>
+
+            <!-- Verbal -->
+            <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Verbal</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Student speaks to anyone other than the designated speaker or speaks out of turn
+                (includes verbal self-stimulation behavior)
+              </p>
+            </div>
+
+            <!-- Motor -->
+            <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Motor</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Student engages in any motor behavior unrelated to the task for at least 3 seconds
+              </p>
+            </div>
+          </div>
+
+          <p class="text-gray-600 dark:text-gray-300 mt-6 italic">
+            A student may exhibit none, one, or multiple non-engaged behaviors during a given
+            interval.
+          </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div
+          class="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl shadow-lg p-8 text-center text-white"
+        >
+          <p class="text-lg mb-4">
+            We hope you find the BOSS tool helpful for observing and tracking student behavior in
+            the classroom. If you have any questions or feedback, please visit our contact page and
+            drop us a line!
+          </p>
+          <p class="text-xl font-semibold mb-6">
+            Happy Tracking!<br />
+            Vennesa and Allen from the BOSS app team
+          </p>
+          <a
+            href="./contact.html"
+            class="inline-flex items-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo and Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8" />
+              <span class="font-display font-bold text-xl text-primary-400"
+                >Behavior Observation: BOSS</span
+              >
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              The premier behavior observation tool for education professionals. Systematic,
+              reliable, and scientifically validated.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
+                class="hover:opacity-80 transition-opacity"
+              >
+                <img src="/src/assets/img/get-on-app-store.png" alt="App Store" class="h-10" />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.bos.boss"
+                class="hover:opacity-80 transition-opacity"
+              >
+                <img src="/src/assets/img/get-on-google-play.png" alt="Google Play" class="h-10" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li>
+                <a href="./index.html#features" class="hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="./how-it-works.html" class="hover:text-white transition-colors"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a href="./contact.html" class="hover:text-white transition-colors">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4">Legal</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="./privacy.html" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="./terms.html" class="hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Behavior Observation Tools. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { initializeTheme } from '/src/scripts/theme.ts'
+      import { initializeInteractions } from '/src/scripts/interactions.ts'
+
+      initializeTheme()
+      initializeInteractions()
+    </script>
+  </body>
+</html>
